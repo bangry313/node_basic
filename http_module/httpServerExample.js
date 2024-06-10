@@ -3,8 +3,10 @@ const http = require('http');
 const server = http.createServer((request, response) => {
     console.log(request);
     response.setHeader('Content-Type', 'text/html; charset=utf-8');
-        response.write('<h2>Hell, Web client</h2>');
-        response.end();
+        //response.write('<h2>Hell, Web client</h2>');
+        response.end('<h2>Hell, Web client</h2>', () => {
+            console.log("밥 먹고 합시다....");
+        });
     }
 );
 
